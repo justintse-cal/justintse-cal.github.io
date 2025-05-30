@@ -12,12 +12,15 @@ sections:
   - block: collection
     content:
       title: Selected Projects
-      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
+      text: Welcome to the project gallery. Here you can see a variety of exciting projects compiled from school and personal work.
       filters:
         folders:
           - project
+      sort:
+        by: weight
+        order: asc
     design:
       view: article-grid
       fill_image: false
       columns: 3
----
+
