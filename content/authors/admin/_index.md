@@ -124,7 +124,7 @@ work:
     company_url: ''
     company_logo: ''
     date_start: 2023-02-01
-    date_end: 2023-06-31
+    date_end: 2023-06-30
     summary:
   
   - position: Research Assistant
@@ -132,7 +132,7 @@ work:
     company_url: ''
     company_logo: ''
     date_start: 2023-02-01
-    date_end: 2023-06-31
+    date_end: 2023-06-30
     summary:
 
 # # Skills
