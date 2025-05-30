@@ -1,16 +1,16 @@
 ---
-title: "An example journal article"
+title: "Evaluating PurpleAir Sensors: Do They Accurately Reflect Ambient Air Temperature?"
 authors:
 - admin
-- Robert Ford
+- Lu Liang
 author_notes:
 - "Equal contribution"
 - "Equal contribution"
-date: "2015-09-01T00:00:00Z"
+date: "2025-05-03T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2017-01-01T00:00:00Z"
+publishDate:
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
@@ -18,23 +18,23 @@ publishDate: "2017-01-01T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Journal of Source Themes, 1*(1)"
+publication: "*Sensors, 25*(10)"
 publication_short: ""
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: This study evaluates the performance of PurpleAir (PA) sensors for ambient temperature measurement by comparing their data with that from collocated high-precision temperature loggers across a dense urban network in a humid subtropical U.S. county. Although PA sensors show a moderate correlation with reference data (r = 0.86), they consistently overestimate temperatures by an average of 3.77 °C. This suggests that while PA sensors are useful for tracking temperature trends, they are not reliable for high-accuracy applications such as monitoring extreme heat events. To address this, we developed and assessed several regression-based calibration methods using readily available crowdsourced data. The most effective approach reduced root mean square error by 51% and mean absolute error by 47%. We further explored the application of uncalibrated PA data in detecting heat events. This work contributes to more accurate heat mapping and supports multi-hazard vulnerability assessments, ultimately advancing the development of climate-resilient cities.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: 
 
 tags:
 - Source Themes
-featured: false
+featured: true
 
 # links:
 # - name: ""
 #   url: ""
-url_pdf: http://arxiv.org/pdf/1512.04133v1
-url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
+url_pdf: https://www.mdpi.com/1424-8220/25/10/3044/pdf?version=1747042439
+url_code: 'https://github.com/lu-liang-geo/PurpleAir-Temp-Calibration'
 url_dataset: ''
 url_poster: ''
 url_project: ''
@@ -45,7 +45,7 @@ url_video: ''
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/jdD8gXaTZsc)'
+  caption: 'Graphical abstract'
   focal_point: ""
   preview_only: false
 
@@ -64,7 +64,7 @@ projects: []
 slides: example
 ---
 
-{{% callout note %}}
+<!-- {{% callout note %}}
 Click the *Cite* button above to demo the feature to enable visitors to import publication metadata into their reference management software.
 {{% /callout %}}
 
@@ -72,4 +72,4 @@ Click the *Cite* button above to demo the feature to enable visitors to import p
 Create your slides in Markdown - click the *Slides* button to check out the example.
 {{% /callout %}}
 
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
+Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/). -->
