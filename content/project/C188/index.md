@@ -8,7 +8,7 @@ tags:
   - School
 weight: 2
 ---
-Multi-criteria decision Analysis, corridor analysis, triangular irregular network (TIN) model
+This class project applied multi-criteria decision Analysis, corridor analysis, triangular irregular network (TIN) model to support the conservation of California Tiger Salamander
 
-[📄 View PDF Report](/uploads/resume.pdf)
+[📄 View PDF](/uploads/C188poster.pdf)
 <!--more-->
