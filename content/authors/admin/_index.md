@@ -192,7 +192,7 @@ certificates:
     icon: 
     summary: |
       The LEED Green Associate credential designates individuals who have a documented, up-to-date understanding of the most current green building principles and practices. The LEED Green Associate is a foundational credential and for many, it is the first step before earning advanced credentials such as the LEED AP with specialty.
-
+---
 ## About Me
 
 I am currently a Graduate Student Researcher at the UC Berkeley Institute of Urban and Regional Revelopment working on real-time air quality mapping in the Bay Area. I hold a Master of Landscacpe Architecture from UC Berkeley with a concentration in environmental planning and geospatial science. My interests lie at the intersection of scientific research and planning, where I strive to leverage model-centric and community-based approaches to bridge knowledge gaps and drive meaningful policy changes. 
