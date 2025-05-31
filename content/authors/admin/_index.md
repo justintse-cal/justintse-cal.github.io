@@ -134,36 +134,50 @@ work:
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Technical Skills
+  - name: Programming
     items:
       - name: Python
         description: ''
         percent: 80
-        icon: code-bracket
-      - name: GIS Science
+        icon: devicon/python
+      - name: Rstudio
         description: ''
-        percent: 100
-        icon: chart-bar
-      - name: SQL
+        percent: 60
+        icon: devicon/rstudio
+      - name: Javascript
         description: ''
-        percent: 40
-        icon: circle-stack
-  - name: Hobbies
+        percent: 60
+        icon: devicon/javascript
+  - name: Graphic design
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking
+      - name: Photoshop
         description: ''
-        percent: 60
-        icon: person-simple-walk
-      - name: Cats
-        description: ''
-        percent: 100
-        icon: cat
-      - name: Photography
+        percent: 70
+        icon: devicon/photoshop
+      - name: Indesign
         description: ''
         percent: 80
-        icon: camera
+        icon: book-open
+      - name: Adobe Illustrator
+        description: ''
+        percent: 70
+        icon: devicon/illustrator
+  - name: Other
+    items:
+      - name: Google Earth Engine
+        description: ''
+        percent: 70
+        icon: map
+      - name: ArcGIS
+        description: ''
+        percent: 100
+        icon: globe-alt
+      - name: QGIS
+        description: ''
+        percent: 80
+        icon: layers
 
 languages:
   - name: English
