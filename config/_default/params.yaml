@@ -36,7 +36,7 @@ header:
     show_theme_chooser: true
     logo:
       text: "Justin Tse"
-      filename: "logo.png"
+      filename: ""
 
 # Site footer
 footer:
