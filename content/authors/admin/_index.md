@@ -31,7 +31,7 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: mailto:tsejustin0505@gmail.com
+    link: mailto:tsejustin0505@gmail.com
     label: E-mail Me
   - icon: brands/github
     url: https://github.com/justintse-cal
@@ -63,7 +63,7 @@ education:
     date_start: 2021-09-21
     date_end: 2023-06-16
     summary: |
-    
+
 work:
   - position: Graduate Student Intern
     company_name: City of San Jose
@@ -199,4 +199,4 @@ awards:
 ---
 ## About Me
 
-I am currently a Graduate Student Researcher at the UC Berkeley Institute of Urban and Regional Revelopment working on real-time air quality mapping in the Bay Area. I hold a Master of Landscacpe Architecture from UC Berkeley with a concentration in environmental planning and geospatial science. My interests lie at the intersection of scientific research and planning, where I strive to leverage model-centric and community-based approaches to bridge knowledge gaps and drive meaningful policy changes. 
+I am currently a Graduate Student Researcher at the UC Berkeley Institute of Urban and Regional Development working on real-time air quality mapping in the Bay Area. I hold a Master of Landscape Architecture from UC Berkeley with a concentration in <span style="color:#08618a">environmental planning</span> and <span style="color:#08618a">geospatial science</span>. My interests lie at the intersection of scientific research and planning, where I strive to leverage <span style="color:#08618a">model-centric</span> and <span style="color:#08618a">community-based</span> approaches to bridge knowledge gaps and drive meaningful policy changes. 
