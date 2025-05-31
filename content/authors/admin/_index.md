@@ -31,7 +31,7 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:tsejustin0505@gmail.com'
+    url: mailto:tsejustin0505@gmail.com
     label: E-mail Me
   - icon: brands/github
     url: https://github.com/justintse-cal
@@ -39,8 +39,8 @@ profiles:
     url: https://www.linkedin.com/in/justin-tse-network/
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=KInv31oAAAAJ&hl=en
-  - icon: academicons/orcid
-    url: https://orcid.org/
+  # - icon: academicons/orcid
+  #   url: https://orcid.org/
 
 interests:
   - Urban Climate
@@ -63,17 +63,7 @@ education:
     date_start: 2021-09-21
     date_end: 2023-06-16
     summary: |
-  # - area: BSc Artificial Intelligence
-  #   institution: Massachusetts Institute of Technology
-  #   date_start: 2016-01-01
-  #   date_end: 2020-12-31
-  #   summary: |
-  #     GPA: 3.4/4.0
-      
-  #     Courses included:
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    
 work:
   - position: Graduate Student Intern
     company_name: City of San Jose

@@ -9,4 +9,6 @@ tags:
 weight: 2
 ---
 Multi-criteria decision Analysis, corridor analysis, triangular irregular network (TIN) model
+
+[📄 View PDF Report](/uploads/resume.pdf)
 <!--more-->
