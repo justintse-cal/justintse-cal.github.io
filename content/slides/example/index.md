@@ -66,33 +66,6 @@ $$
 f\left( x \right) = \;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
 $$
 
----
-
-## Fragments
-
-Make content appear incrementally
-
-```
-{{</* fragment */>}} $\mathbf{y} =  $ {{</* /fragment */>}}
-{{</* fragment */>}} $X\boldsymbol\beta$ {{</* /fragment */>}}
-{{</* fragment */>}} $+ \boldsymbol\varepsilon$ {{</* /fragment */>}}
-```
-
-Press `Space` to play!
-
-{{< fragment >}} $\mathbf{y} =  $ {{< /fragment >}}
-{{< fragment >}} $X\boldsymbol\beta$ {{< /fragment >}}
-{{< fragment >}} $+ \boldsymbol\varepsilon$ {{< /fragment >}}
-
----
-
-A fragment can accept two optional parameters:
-
-- `class`: use a custom style (requires definition in custom CSS)
-- `weight`: sets the order in which a fragment appears
-
----
-
 ## Speaker Notes
 
 Add speaker notes to your presentation
