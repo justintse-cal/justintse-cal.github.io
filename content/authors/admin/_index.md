@@ -163,10 +163,10 @@ skills:
       - name: Adobe Illustrator
         description: ''
         percent: 70
-        icon: devicon/illustrator
+        icon: devicon/illustrator-plain
   - name: Other
     items:
-      - name: Google Earth Engine
+      - name: GEE
         description: ''
         percent: 70
         icon: map
@@ -177,7 +177,7 @@ skills:
       - name: QGIS
         description: ''
         percent: 80
-        icon: layers
+        icon: globe
 
 languages:
   - name: English
