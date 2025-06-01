@@ -39,21 +39,24 @@ sections:
 
     design:
       columns: 2
-  - block: hero
+  - block: carousel
     content:
-      itle: ''
-      text: ''
+      items:
+        - title: ''
+          image: thesis_pinup.jpg
+          caption: ''
+        - title: ''
+          mage: denton_master.jpg
+          caption: ''
+        - title: ''
+          image: DT_Perspective1.jpg
+          caption: ''
     design:
+      height: screen
       background:
-        image:
-          filename: thesis_pinup.jpg
-          size: cover
-          position: center
-          parallax: false
-          brightness: 1
-          text_color_light: true
+        text_color_light: true
       spacing:
-        height: full
+        padding: ['0', '0', '0', '0']
   - block: collection
     id: papers
     content:
