@@ -1,6 +1,6 @@
 ---
 title: GIS-based California Tiger Salamnder Habitat Assessment*
-date: 2024-04-05
+date: 2023-12-05
 external_link:
 tags:
   - GIS
