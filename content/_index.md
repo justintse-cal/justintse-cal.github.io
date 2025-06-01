@@ -41,19 +41,23 @@ sections:
       columns: 2
   - block: markdown
     content:
-      title: ''
+      title:
       subtitle: ''
-      text: |-
-        <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
-          <img src="/uploads/present.jpg" style="width: 100%; max-width: 800px; height: auto; border-radius: 16px;">
-          <img src="/uploads/regionalWind.jpg" style="width: 100%; max-width: 800px; height: auto; border-radius: 16px;">
-          <img src="/uploads/UHI-UPI.jpg" style="width: 100%; max-width: 800px; height: auto; border-radius: 16px;">
-        </div>
+      text:
     design:
       columns: '1'
+      background:
+        image: 
+          filename: thesis_pinup.jpg
+          filters:
+            brightness: 1
+          parallax: false
+          position: center
+          size: cover
+          text_color_light: true
       spacing:
-        padding: ['4rem', '2rem', '4rem', '2rem']
-
+        padding: ['20px', '0', '20px', '0']
+      css_class: fullscreen
   - block: collection
     id: papers
     content:
