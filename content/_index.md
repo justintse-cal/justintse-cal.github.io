@@ -39,21 +39,31 @@ sections:
 
     design:
       columns: 2
-  - block: features
+  - block: markdown
     content:
-      title: Research Visuals
-      items:
-        - title: Urban Heat Mapping
-          mage: uploads/present.jpg
-          alt_text: Urban heat island mapping
-        - title: Low-Cost Sensors
-          image: uploads/regionalWind.jpg
-          alt_text: Air quality sensors
-        - title: Climate Zones
-          image: uploads/UHI-UPI.jpg
-          alt_text: Local climate zones
+      title: ''
+      subtitle: ''
+      text: |-
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <img src="/uploads/present.jpg" style="width: 30%; border-radius: 12px;">
+          <img src="/uploads/regionalWind.jpg" style="width: 30%; border-radius: 12px;">
+          <img src="/uploads/UHI-UPI.jpg" style="width: 30%; border-radius: 12px;">
+        </div>
     design:
-      columns: 3
+      columns: '1'
+      background:
+        image:
+          filename:
+          filters:
+            brightness: 1
+          parallax: false
+          position: center
+          size: cover
+          text_color_light: true
+      spacing:
+        padding: ['20px', '0', '20px', '0']
+      css_class: fullscreen
+
   - block: collection
     id: papers
     content:
