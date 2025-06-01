@@ -39,24 +39,33 @@ sections:
 
     design:
       columns: 2
-  - block: carousel
+  - block: hero
     content:
-      items:
-        - title: ''
-          image: thesis_pinup.jpg
-          caption: ''
-        - title: ''
-          mage: denton_master.jpg
-          caption: ''
-        - title: ''
-          image: DT_Perspective1.jpg
-          caption: ''
+      title: Slide 1
     design:
-      height: screen
       background:
-        text_color_light: true
+        image:
+          filename: thesis_pinup.jpg
+          size: cover
+          position: center
+          text_color_light: true
       spacing:
+        min_height: screen
         padding: ['0', '0', '0', '0']
+  - block: hero
+    content:
+      title: Slide 2
+    design:
+      background:
+        image:
+          filename: denton_master.jpg
+          size: cover
+          position: center
+          text_color_light: true
+      spacing:
+        min_height: screen
+        padding: ['0', '0', '0', '0']
+
   - block: collection
     id: papers
     content:
