@@ -41,7 +41,7 @@ sections:
       columns: 2
   - block: hero
     content:
-      title: Slide 1
+      title:
     design:
       background:
         image:
@@ -52,20 +52,19 @@ sections:
       spacing:
         min_height: screen
         padding: ['0', '0', '0', '0']
-  - block: hero
-    content:
-      title: Slide 2
-    design:
-      background:
-        image:
-          filename: denton_master.jpg
-          size: cover
-          position: center
-          text_color_light: true
-      spacing:
-        min_height: screen
-        padding: ['0', '0', '0', '0']
-
+  # - block: hero
+  #   content:
+  #     title:
+  #   design:
+  #     background:
+  #       image:
+  #         filename: denton_master.jpg
+  #         size: cover
+  #         position: center
+  #         text_color_light: true
+  #     spacing:
+  #       min_height: screen
+  #       padding: ['0', '0', '0', '0']
   - block: collection
     id: papers
     content:
