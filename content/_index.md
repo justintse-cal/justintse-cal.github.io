@@ -39,15 +39,19 @@ sections:
 
     design:
       columns: 2
-  - block: gallery
+  - block: features
     content:
-      images:
-        - image: uploads/present.jpg
-          caption: 
-        - image: uploads/regionalWind.jpg
-          caption: 
-        - image: uploads/UHI-UPI.jpg
-          caption:
+      title: Research Visuals
+      items:
+        - title: Urban Heat Mapping
+          mage: uploads/present.jpg
+          alt_text: Urban heat island mapping
+        - title: Low-Cost Sensors
+          image: uploads/regionalWind.jpg
+          alt_text: Air quality sensors
+        - title: Climate Zones
+          image: uploads/UHI-UPI.jpg
+          alt_text: Local climate zones
     design:
       columns: 3
   - block: collection
