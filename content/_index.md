@@ -44,25 +44,15 @@ sections:
       title: ''
       subtitle: ''
       text: |-
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <img src="/uploads/present.jpg" style="width: 30%; border-radius: 12px;">
-          <img src="/uploads/regionalWind.jpg" style="width: 30%; border-radius: 12px;">
-          <img src="/uploads/UHI-UPI.jpg" style="width: 30%; border-radius: 12px;">
+        <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+          <img src="/uploads/present.jpg" style="width: 100%; max-width: 800px; height: auto; border-radius: 16px;">
+          <img src="/uploads/regionalWind.jpg" style="width: 100%; max-width: 800px; height: auto; border-radius: 16px;">
+          <img src="/uploads/UHI-UPI.jpg" style="width: 100%; max-width: 800px; height: auto; border-radius: 16px;">
         </div>
     design:
       columns: '1'
-      background:
-        image:
-          filename:
-          filters:
-            brightness: 1
-          parallax: false
-          position: center
-          size: cover
-          text_color_light: true
       spacing:
-        padding: ['20px', '0', '20px', '0']
-      css_class: fullscreen
+        padding: ['4rem', '2rem', '4rem', '2rem']
 
   - block: collection
     id: papers
