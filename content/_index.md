@@ -39,25 +39,21 @@ sections:
 
     design:
       columns: 2
-  - block: markdown
+  - block: hero
     content:
-      title:
-      subtitle: ''
-      text:
+      itle: ''
+      text: ''
     design:
-      columns: '1'
       background:
-        image: 
+        image:
           filename: thesis_pinup.jpg
-          filters:
-            brightness: 1
-          parallax: false
-          position: center
           size: cover
+          position: center
+          parallax: false
+          brightness: 1
           text_color_light: true
       spacing:
-        padding: ['20px', '0', '20px', '0']
-      css_class: fullscreen
+        height: full
   - block: collection
     id: papers
     content:
