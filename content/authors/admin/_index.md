@@ -57,7 +57,7 @@ education:
       Thesis on _Examining the Interplay Between Temperature and PM2.5 and Their Relationships With Land Use and Landscape Patterns: A Case Study of Denton County_. Supervised by [Prof Lu Liang](https://ced.berkeley.edu/people/lu-liang). Presented at the 2025 AAG Annual Meeting.
     button:
       text: 'Read Thesis'
-      url: 'https://example.com'
+      url: 'https://drive.google.com/file/d/1iyNvv56si6e3XpnpyjeI5kwDepdsp1KR/view?usp=sharing'
   - area: BA Environmental Studies
     institution: Unversity of California, Santa Barbara
     date_start: 2021-09-21
