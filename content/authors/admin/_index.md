@@ -32,7 +32,7 @@ organizations:
 profiles:
   # - icon: at-symbol
   #   link: mailto:tsejustin0505@gmail.com
-    label: E-mail Me
+    # label: E-mail Me
   - icon: brands/github
     url: https://github.com/justintse-cal
   - icon: brands/linkedin
