@@ -17,6 +17,7 @@ sections:
         folders:
           - project
       offset: 0
+      count: 10
       sort:
         by: weight
         order: asc
