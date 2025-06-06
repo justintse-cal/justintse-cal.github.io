@@ -1,6 +1,6 @@
 ---
 title: 'Scenic Imagination: Strawberry Creek & Faculty Glade'
-date: 2023-1-05
+date: 2023-12-05
 external_link: 
 tags:
   - Design
