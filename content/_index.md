@@ -35,7 +35,7 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        I am committed to leveraging nature-based solutions and quantitative methods to enhance urban health. My work emphasizes a <span style="color:orange">multi-hazard approach</span> to understanding the co-occurrence and interactions of various urban stressors, such as urban heat islands and pollution islands, within complex urban systems. I am particularly interested in how <span style="color:orange">climate-responsive design</span> and landscape forms can deliver co-benefits in mitigating the adverse effects of urbanization. In parallel, I explore the use of <span style="color:orange">low-cost sensing</span> technologies to develop integrated environmental monitoring systems and to improve public awareness and perception of ambient environmental conditions.
+        My research concerns three interrelated domains: (1) Leverage modern opportunities, such as <span style="color:orange">low-cost and opportunistic sensing</span>, for producing actionable and high-resolution data to support <span style="color:orange">smart city initiatives</span>; (2) Investigate the spatial and temporal co-occurrence and interactions of various <span style="color:orange">urban stressors</span> within urban socio-environmental systems and their relationships with <span style="color:orange">urban morphology</span>; (3) Explore how emerging technologies and methodologies can be integrated into <span style="color:orange">contemporary climate-sensitive urban planning</span>.
 
     design:
       columns: 2
