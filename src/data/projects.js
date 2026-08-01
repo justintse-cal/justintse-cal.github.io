@@ -7,12 +7,13 @@ export const PROJECTS = [
   {
     id: 'project-PA',
     title: 'Evaluating PurpleAir Sensors: Do They Accurately Reflect Ambient Air Temperature?',
+    shortTitle: 'PurpleAir Sensor Calibration',
     theme: 'Research',
     description: 'As low-cost devices, PurpleAir sensors offer vast opportunistic sensing capabilities due to their widespread deployment ' +
     'This project evaluates PurpleAir temperature measurements and introduces a multiple linear regression model for calibration, ' +
     'advancing hyperlocal heat mapping and multi-hazard vulnerability assessments.',
     image: '/img/evaluatePA.jpg',
-    images: ['/img/calibrated.png'],
+    images: ['/img/calibrated.jpg'],
     links: {
       paper: 'https://www.mdpi.com/1424-8220/25/10/3044',
     }
@@ -20,10 +21,11 @@ export const PROJECTS = [
   {
     id: 'BAAMAP',
     title: 'Bay Area Community Air Quality Map',
+    shortTitle: 'Bay Area Air Quality Map',
     theme: 'Research',
     description: 'Motivated by the concept of digital twins, we developed an ArcGIS-based application to advance community-centric, real-time air quality monitoring using a spatial-dependent and explainable machine learning method.',
     image: '/img/BAAQMAP.jpg',
-    images: ['/img/baaqmap1.png', '/img/baaqmap2.png', '/img/aqmethod.png'],
+    images: ['/img/baaqmap1.jpg', '/img/baaqmap2.jpg', '/img/aqmethod.jpg'],
     links: {
       website: ''
     }
@@ -31,6 +33,7 @@ export const PROJECTS = [
   {
     id: 'park-equity',
     title: 'San Joes Park Equity Model',
+    shortTitle: 'San Jose Park Equity Model',
     theme: 'Research',
     description: 'Motivated by the concept of digital twins, we developed an ArcGIS-based application to advance community-centric, real-time air quality monitoring using a spatial-dependent and explainable machine learning method.',
     image: '/img/Parks.jpeg',
@@ -42,12 +45,13 @@ export const PROJECTS = [
   {
     id: 'thesis-site-analysis',
     title: 'The Toxic Landscape of Denton',
+    shortTitle: 'Toxic Landscape of Denton',
     theme: 'Design',
     description: 'This site analysis aims to highlight how extreme heat and ' +
      'poor air quality inevitably impacts the City of Denton as the Metroplex expands, ' +
      'prompting the need for a better management plan to mitigate these environmental stressors.',
     image: '/img/metroplex.jpg',
-    images: ['/img/thesis_poster.png'],
+    images: ['/img/thesis_poster.jpg'],
     links: {
       poster: 'pdf/thesis_pinup.pdf'
     }
@@ -55,10 +59,11 @@ export const PROJECTS = [
   {
     id: 'project-2',
     title: 'Yeoncheon Imjin Biosphere Reserve Vision Plan',
+    shortTitle: 'Yeoncheon Biosphere Reserve',
     theme: 'Design',
     description: 'Co-developed a vision plan for the Biosphere Reserve that notes areas best developed for sustainable economies and “hubs” for ecological and cultural tourism, areas most critical for environmental protection, actions to reduce disturbance to endangered species, and resolution of conflicts between recreation and endangered species.',
-    image: '/img/Yeoncheon.png',
-    images: ['/img/Yeoncheon.png'],
+    image: '/img/Yeoncheon.jpg',
+    images: ['/img/Yeoncheon.jpg'],
     links: {
       report: '/pdf/VisionPlan.pdf',
       slides: '/pdf/Biosphere_slides.pdf',
@@ -67,10 +72,11 @@ export const PROJECTS = [
   {
     id: 'APA',
     title: 'Reclaiming Nicollect: the People and the Place',
+    shortTitle: 'Reclaiming Nicollet',
     theme: 'Design',
     description: 'The Reclaiming Nicollet project seeks to reconnect 10 acres of land to the existing surrounding community and for future community members. This report synthesizes background analysis and design concepts of Reclaiming Nicollet for the APA Student Design Competition. Using the provided materials and additional research, our team thought through a collaborative and research-driven approach to address the community’s evolving needs in a comprehensive site design. This project is meant to go beyond redeveloping the space.',
-    image: '/img/APA.png',
-    images: ['/img/street_section.png', '/img/programming.png'],
+    image: '/img/APA.jpg',
+    images: ['/img/street_section.jpg', '/img/programming.jpg'],
     links: {
       report: '/pdf/Reclaiming_Nicollet.pdf',
     }
@@ -78,10 +84,11 @@ export const PROJECTS = [
   {
     id: 'LA200',
     title: 'Scenic Imagination: Strawberry Creek & Faculty Glade',
+    shortTitle: 'Scenic Imagination',
     theme: 'Design',
     description: 'My first studio at UC Berkeley.',
-    image: '/img/LA200.png',
-    images: ['/img/explanatory_graphics.png', '/img/LA200.png', '/img/section1.png', '/img/section2.png'],
+    image: '/img/LA200.jpg',
+    images: ['/img/explanatory_graphics.jpg', '/img/LA200.jpg', '/img/section1.jpg', '/img/section2.jpg'],
     links: {
       slides: '/pdf/LA200.pdf',
     }
@@ -89,10 +96,11 @@ export const PROJECTS = [
   {
     id: 'lcz',
     title: 'GIS-Based Local Climate Zone Mapping: A Case Study of Denton County, TX',
+    shortTitle: 'Local Climate Zone Mapping',
     theme: 'Research',
     description: 'Authored an ArcPy script to classify Local Climate Zones in Denton County using LiDAR, building footprint, and land cover data.',
     image: '/img/newLCZ.jpg',
-    images: ['/img/LCZ.jpg', '/img/LCZprocess.png', '/img/post_processing.png'],
+    images: ['/img/LCZ.jpg', '/img/LCZprocess.jpg', '/img/post_processing.jpg'],
     links: {
       slides: '/pdf/LCZGIS.pdf',
       video: 'https://escholarship.org/uc/item/0fv7k4d5#supplemental',
@@ -102,6 +110,7 @@ export const PROJECTS = [
   {
     id: 'C188',
     title: 'GIS-Based California Tiger Salamander Habitat Suitability and Corridor Analysis in Central Valley, CA',
+    shortTitle: 'Tiger Salamander Habitat Analysis',
     theme: 'Research',
     description: 'The final group project of my first GIS class at UC Berkeley.',
     image: '/img/C188.jpg',
@@ -113,6 +122,7 @@ export const PROJECTS = [
   {
     id: 'LA221',
     title: 'Correlation, Seasonality, and Trends of Temperature and Aerosol Optical Depth',
+    shortTitle: 'Temperature & AOD Trends',
     theme: 'Research',
     description: 'Using satelite products to analyze seasonal trends and correlations between temperature and air quality',
     image: '/img/LA221.jpg',
@@ -124,10 +134,11 @@ export const PROJECTS = [
   {
     id: 'project-8',
     title: 'Breathing Earth Generator',
+    shortTitle: 'Breathing Earth Generator',
     theme: 'Applications',
-    description: 'An Google Earth Engine app that reveals how the Earth breathes. Can you guess where this animation was created?',
+    description: 'An Google Earth Engine app that reveals how the Earth breathes.',
     image: '/img/ndvi.gif',
-    images: ['/img/ndvi-gee.png'],
+    images: ['/img/ndvi-gee.jpg'],
     links: {
       website: 'https://ee-tsejustin-geo4dev.projects.earthengine.app/view/breathing-earth-generator'
     }
@@ -135,10 +146,11 @@ export const PROJECTS = [
   {
     id: 'fire-impact-explorer',
     title: 'Fire Impact Explorer',
+    shortTitle: 'Fire Impact Explorer',
     theme: 'Applications',
     description: 'An Google Earth Engine app for assessing burn severity and estimating the socio-economic impacts of fire events.',
-    image: '/img/FireImpactRaster.png',
-    images: ['/img/FireImpactExplorer.png'],
+    image: '/img/FireImpactRaster.jpg',
+    images: ['/img/FireImpactExplorer.jpg'],
     links: {
       website: 'https://ee-tsejustin-geo4dev.projects.earthengine.app/view/fire-impact-explorer'
     }

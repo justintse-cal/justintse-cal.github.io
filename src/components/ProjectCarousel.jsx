@@ -90,7 +90,7 @@ export default function ProjectCarousel({ projects, activeIndex = 0, onActiveInd
                     loading="lazy"
                   />
                 </div>
-                <span className="thumbnail-title multiline-title">{proj.title}</span>
+                <span className="thumbnail-title multiline-title">{proj.shortTitle || proj.title}</span>
               </div>
             </SwiperSlide>
           );

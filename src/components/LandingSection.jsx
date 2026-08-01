@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { PROJECTS } from '../data/projects';
 
@@ -10,8 +10,27 @@ const getProjectImg = (proj) => {
 export default function LandingSection({ isActive, onExploreClick }) {
   const transitionClass = isActive ? 'view-active' : 'view-hidden-up';
 
-  // Quadruple projects array to create a continuous, seamless infinite loop
-  const marqueeItems = [...PROJECTS, ...PROJECTS, ...PROJECTS, ...PROJECTS];
+  // Currently popped random card index
+  const [poppedIndex, setPoppedIndex] = useState(0);
+
+  // Pick a random project index every 3 seconds
+  useEffect(() => {
+    if (!isActive) return;
+
+    const interval = setInterval(() => {
+      setPoppedIndex((prev) => {
+        let next;
+        do {
+          next = Math.floor(Math.random() * PROJECTS.length);
+        } while (next === prev && PROJECTS.length > 1);
+        return next;
+      });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [isActive]);
+
+  const totalProjects = PROJECTS.length;
 
   return (
     <section
@@ -21,49 +40,104 @@ export default function LandingSection({ isActive, onExploreClick }) {
     >
       <div className="contour-lines-bg" aria-hidden="true" />
       <div className="contour-lines-spotlight" aria-hidden="true" />
-      <div className="landing-content">
-        <h1 className="tagline">
-          Innovating geospatial solutions that
-        </h1>
-        <a href="https://git.io/typing-svg" className="typing-svg-link">
-          <img src="https://readme-typing-svg.demolab.com?font=Merriweather&weight=800&size=36&duration=2500&pause=1000&color=E36414&center=true&vCenter=true&random=true&width=800&height=50&lines=bring+location+intelligence+to+life;bridge+the+digital+gap;build+smarter+cities" alt="Typing SVG" className="typing-svg-img" />
-        </a>
-        <p className="summary">
-          Hi, I'm Justin. I work at the intersection of design, urban planning, and spatial science.
-          Currently building a climate risk analytical tool for insurance industry leaders.
-        </p>
 
-        {/* Moving Horizontal Project Icons Marquee Carousel */}
-        <div className="landing-carousel-block" data-testid="landing-carousel-block">
-          <div className="landing-marquee-track">
-            {marqueeItems.map((proj, idx) => (
-              <div
-                key={`${proj.id}-${idx}`}
-                className="landing-icon-item"
-                title={proj.title}
-              >
-                <img
-                  src={getProjectImg(proj)}
-                  alt={proj.title}
-                  className="landing-icon-img"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
+      <div className="landing-grid">
+        {/* Left Column: Hero Content */}
+        <div className="landing-col-left">
+          <h1 className="tagline">
+            Innovating geospatial solutions that
+          </h1>
+
+          <a href="https://git.io/typing-svg" className="typing-svg-link">
+            <img
+              src="https://readme-typing-svg.demolab.com?font=Merriweather&weight=400&size=60&duration=2500&pause=1000&color=E36414&center=false&vCenter=true&random=true&width=800&height=64&lines=bring+location+intelligence;bridge+the+digital+gap;build+smarter+cities"
+              alt="Typing SVG"
+              className="typing-svg-img"
+            />
+          </a>
+
+          <p className="summary">
+            Hi, I'm Justin. I work at the intersection of design, urban planning, and spatial science.
+            Currently building a climate risk analytical tool for insurance industry leaders.
+          </p>
+
+          <button
+            type="button"
+            className="scroll-hint-btn"
+            onClick={onExploreClick}
+            aria-label="Navigate to projects section"
+            tabIndex={isActive ? 0 : -1}
+          >
+            <span>Scroll, swipe or tap to explore</span>
+            <ChevronDown size={20} />
+          </button>
         </div>
 
-        <button
-          type="button"
-          className="scroll-hint-btn"
-          onClick={onExploreClick}
-          aria-label="Navigate to projects section"
-          tabIndex={isActive ? 0 : -1}
+        {/* Right Column: Realistic Deep Axonometric 3D Cube Container */}
+        <div
+          className="landing-col-right"
+          data-testid="landing-carousel-block"
         >
-          <span>Scroll or click to explore projects</span>
-          <ChevronDown size={20} />
-        </button>
+          <div className="axonometric-viewport">
+            <div className="axonometric-box">
+              {/* 3D Cube Glass Floor & Enclosing 3D Glass Walls */}
+              <div className="box-floor" aria-hidden="true" />
+              <div className="box-wall-back" aria-hidden="true" />
+              <div className="box-wall-left" aria-hidden="true" />
+              <div className="box-wall-right" aria-hidden="true" />
+
+              {/* Upright Cards Deeply Enclosed Inside the Box Floor */}
+              <div className="box-cards-single-column">
+                {PROJECTS.map((proj, idx) => {
+                  const isPopped = poppedIndex === idx;
+
+                  // Spacing along depth axis
+                  const depthOffset = (idx - (totalProjects / 2)) * 18;
+
+                  // Resting cards sit cleanly on the box floor (+15px)
+                  // Popped cards lift high UP (-150px) out of the box
+                  const popLiftY = isPopped ? -200 : 15;
+                  const popLiftZ = isPopped ? 50 : 0;
+
+                  return (
+                    <div
+                      key={proj.id}
+                      className={`axonometric-card ${isPopped ? 'is-popped' : ''}`}
+                      style={{
+                        transform: `rotateX(-90deg) translate3d(0px, ${popLiftY}px, ${depthOffset + popLiftZ}px)`,
+                        zIndex: isPopped ? 300 : 10 + idx,
+                      }}
+                      title={proj.title}
+                    >
+                      <div className="axonometric-card-image-wrap">
+                        <img
+                          src={getProjectImg(proj)}
+                          alt={proj.title}
+                          className="axonometric-card-img"
+                          loading="lazy"
+                        />
+                        <div className="axonometric-card-overlay">
+                          <h4 className="axonometric-card-title">{proj.shortTitle || proj.title}</h4>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Front Glass Facade Wall (renders in front of resting cards) */}
+              <div className="box-wall-front" aria-hidden="true" />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
+
+
+
+
+
+
+

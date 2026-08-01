@@ -2,9 +2,9 @@ import React from 'react';
 import { THEMES } from '../utils/viewTransition';
 
 const THEME_BG_IMAGES = [
-  '/img/APA2.png',
-  '/img/1980.png',
-  '/img/applications.png',
+  '/img/APA2.jpg',
+  '/img/1980.jpg',
+  '/img/applications.jpg',
 ];
 
 export default function ThemeSelectionSection({ isActive, onSelectTheme }) {

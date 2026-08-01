@@ -1,17 +1,16 @@
 # Personal Portfolio Website
 
-A modern, high-performance, and interactive personal portfolio web application built with **React 19**, **Vite**, **GSAP**, and **Swiper**. Designed with dark theme aesthetics, dynamic animations, and interactive theme customization.
+A modern personal portfolio website built with **React 19**, **Vite**, **GSAP**, and **Swiper** and designed with dark theme aesthetics. This is developed with the assistance of Google's Gemini 3.6 (High).
 
 Live Demo: [https://justintse-cal.github.io](https://justintse-cal.github.io)
 
 ## ✨ Features
 
-- **Dynamic Interactive Themes**: Real-time theme customizer allowing visitors to switch background tones, accent colors, and layout aesthetics.
-- **Fluid GSAP Animations**: Smooth transitions, scroll triggers, and micro-interactions.
-- **Project Showcase Carousel**: Interactive project slider powered by Swiper with detailed drawer modals for each project.
+- **3D axonometric Pop-up**: axonometric card animation in the landing page to highlight projects in a pop-up style.
+- **Theme Selection Section**: dedicated section for theme selection
+- **Project Showcase Carousel**: Interactive carousel style project showcase with detailed drawer modals for each project.
 - **Custom Cursor & Smooth Micro-Interactions**: Modern pointer interactions for an immersive user experience.
 - **Fully Responsive**: Optimized across all device viewports from mobile screens to desktop displays.
-- **Fast Performance & Modern Tech Stack**: Powered by Vite and React 19 for instantaneous load times and lightweight client bundles.
 
 ## 🛠️ Tech Stack
 
