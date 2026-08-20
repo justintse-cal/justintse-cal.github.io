@@ -13,6 +13,22 @@ export default function LandingSection({ isActive, onExploreClick }) {
   // Currently popped random card index
   const [poppedIndex, setPoppedIndex] = useState(0);
 
+  // Track mobile viewport for responsive pop lift distance
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth <= 768;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Pick a random project index every 3 seconds
   useEffect(() => {
     if (!isActive) return;
@@ -95,9 +111,9 @@ export default function LandingSection({ isActive, onExploreClick }) {
                   const depthOffset = (idx - (totalProjects / 2)) * 18;
 
                   // Resting cards sit cleanly on the box floor (+15px)
-                  // Popped cards lift high UP (-150px) out of the box
-                  const popLiftY = isPopped ? -200 : 15;
-                  const popLiftZ = isPopped ? 50 : 0;
+                  // Desktop/webview popped cards lift -220px; Mobile popped cards lift -100px
+                  const popLiftY = isPopped ? (isMobile ? -100 : -220) : 15;
+                  const popLiftZ = isPopped ? (isMobile ? 30 : 50) : 0;
 
                   return (
                     <div

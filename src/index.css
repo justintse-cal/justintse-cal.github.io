@@ -1441,7 +1441,7 @@ html, body {
   .typing-svg-img {
     max-width: 100%;
     height: auto;
-    max-height: 36px;
+    max-height: 64px;
     object-fit: contain;
     object-position: left;
   }
@@ -1464,7 +1464,7 @@ html, body {
 
   .landing-col-right {
     min-height: 260px;
-    margin-top: 0;
+    margin-top: 1rem;
   }
 
   .axonometric-viewport {
