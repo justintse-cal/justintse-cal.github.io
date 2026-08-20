@@ -944,6 +944,8 @@ html, body {
   justify-content: space-between;
   width: 100%;
   flex-shrink: 0;
+  position: relative;
+  z-index: 10;
 }
 
 /* Row 2: Middle Row (Main Project View) - Centered bounded container */
@@ -957,6 +959,8 @@ html, body {
   flex: 1 1 auto;
   min-height: 0;
   justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* Row 3: Footer Row (Social Links) - Matches BottomBar edge alignment */
@@ -966,6 +970,8 @@ html, body {
   justify-content: space-between;
   width: 100%;
   flex-shrink: 0;
+  position: relative;
+  z-index: 10;
 }
 
 .projects-header-nav {
@@ -1463,8 +1469,8 @@ html, body {
   }
 
   .landing-col-right {
-    min-height: 260px;
-    margin-top: 1rem;
+    min-height: 240px;
+    margin-top: -0.75rem;
   }
 
   .axonometric-viewport {
@@ -1698,7 +1704,8 @@ html, body {
   }
 
   .landing-col-right {
-    min-height: 240px;
+    min-height: 220px;
+    margin-top: -1.25rem;
   }
 
   .axonometric-box {
@@ -1747,6 +1754,80 @@ html, body {
 
   .swiper-slide {
     width: 82px;
+  }
+}
+
+/* ==========================================================================
+   Vertical Viewport Height Resizing & Flexible Layout Scaling
+   ========================================================================== */
+@media (max-height: 800px) {
+  .projects-row-main {
+    gap: 0.5rem;
+  }
+
+  .detail-panel {
+    max-height: clamp(180px, 32vh, 300px);
+    gap: 1.5rem;
+  }
+
+  .detail-title {
+    font-size: clamp(1.2rem, 2.5vh, 1.8rem);
+  }
+
+  .detail-description {
+    font-size: clamp(0.85rem, 1.8vh, 0.925rem);
+    line-height: 1.45;
+  }
+
+  .carousel-wrapper-2d {
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .projects-swiper-2d {
+    padding-top: 1.35rem !important;
+    padding-bottom: 1.85rem !important;
+  }
+
+  .swiper-slide {
+    width: clamp(75px, 11vh, 110px);
+  }
+}
+
+@media (max-height: 650px) {
+  .projects-row-main {
+    gap: 0.35rem;
+  }
+
+  .detail-panel {
+    max-height: clamp(150px, 30vh, 240px);
+    gap: 1rem;
+  }
+
+  .detail-title {
+    font-size: clamp(1.05rem, 2.2vh, 1.45rem);
+  }
+
+  .link-pill {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .detail-description {
+    font-size: clamp(0.8rem, 1.6vh, 0.875rem);
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    width: clamp(65px, 9vh, 90px);
+  }
+
+  .active-arrow-indicator {
+    top: -1.2rem;
   }
 }
 
