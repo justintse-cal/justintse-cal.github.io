@@ -1,7 +1,9 @@
 import React from 'react';
 import { Linkedin, Github, Mail } from 'lucide-react';
 
-export default function BottomBar() {
+export default function BottomBar({ hidden }) {
+  if (hidden) return null;
+
   return (
     <footer className="fixed-bar bottom-bar" data-testid="bottom-bar">
       <div className="contact-group">

@@ -132,7 +132,19 @@ export const PROJECTS = [
     }
   },
   {
-    id: 'project-8',
+    id: 'random-route',
+    title: 'Hong Kong Random Route',
+    shortTitle: 'HK Random Route',
+    theme: 'Applications',
+    description: 'A random pedestrian route generator for Hong Kong.',
+    image: '/img/route.png',
+    images: ['/img/light_web.png', '/img/dark_mobile.png'],
+    links: {
+      website: 'https://hk-random-route.vercel.app/'
+    }
+  },
+  {
+    id: 'breathing-earth',
     title: 'Breathing Earth Generator',
     shortTitle: 'Breathing Earth Generator',
     theme: 'Applications',

@@ -114,7 +114,8 @@ export default function LandingSection({ isActive, onExploreClick }) {
                           src={getProjectImg(proj)}
                           alt={proj.title}
                           className="axonometric-card-img"
-                          loading="lazy"
+                          loading="eager"
+                          decoding="async"
                         />
                         <div className="axonometric-card-overlay">
                           <h4 className="axonometric-card-title">{proj.shortTitle || proj.title}</h4>

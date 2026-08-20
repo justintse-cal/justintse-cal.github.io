@@ -33,6 +33,17 @@ export default function ProjectCarousel({ projects, activeIndex = 0, onActiveInd
         centeredSlides={false}
         slidesPerView="auto"
         spaceBetween={24}
+        breakpoints={{
+          320: {
+            spaceBetween: 12,
+          },
+          640: {
+            spaceBetween: 16,
+          },
+          769: {
+            spaceBetween: 24,
+          },
+        }}
         grabCursor={true}
         allowTouchMove={true}
         mousewheel={{
@@ -44,11 +55,6 @@ export default function ProjectCarousel({ projects, activeIndex = 0, onActiveInd
           hide: false,
           snapOnRelease: false,
           el: '.custom-swiper-scrollbar',
-        }}
-        onSlideChange={(swiper) => {
-          if (onActiveIndexChange) {
-            onActiveIndexChange(swiper.activeIndex);
-          }
         }}
         className="projects-swiper-2d"
       >
@@ -88,6 +94,7 @@ export default function ProjectCarousel({ projects, activeIndex = 0, onActiveInd
                     alt={proj.title}
                     className="thumbnail-image"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <span className="thumbnail-title multiline-title">{proj.shortTitle || proj.title}</span>

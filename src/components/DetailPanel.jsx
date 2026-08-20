@@ -37,54 +37,57 @@ export default function DetailPanel({ project }) {
 
   return (
     <article className="detail-panel" data-testid="detail-panel">
-      {/* Display Image Carousel with Left and Right Navigation Arrows Outside */}
+      {/* Display Image Carousel with Left and Right Navigation Arrows inside parent container */}
       <div className="detail-image-wrapper" data-testid="detail-photo-grid">
-        {photos.length > 1 && (
-          <button
-            type="button"
-            className="carousel-arrow-btn carousel-arrow-left"
-            onClick={handlePrev}
-            aria-label="Previous image"
-            data-testid="carousel-prev-btn"
-          >
-            <ChevronLeft size={20} />
-          </button>
-        )}
+        <div className="detail-carousel-container">
+          {photos.length > 1 && (
+            <button
+              type="button"
+              className="carousel-arrow-btn carousel-arrow-left"
+              onClick={handlePrev}
+              aria-label="Previous image"
+              data-testid="carousel-prev-btn"
+            >
+              <ChevronLeft size={20} />
+            </button>
+          )}
 
-        <div className="detail-image-carousel" data-testid="detail-image-carousel">
-          <img
-            src={currentPhoto}
-            alt={`${project.title} — photo ${safeImgIndex + 1}`}
-            className="detail-carousel-img"
-            key={safeImgIndex}
-          />
+          <div className="detail-image-carousel" data-testid="detail-image-carousel">
+            <img
+              src={currentPhoto}
+              alt={`${project.title} — photo ${safeImgIndex + 1}`}
+              className="detail-carousel-img"
+              loading="eager"
+              decoding="async"
+            />
+
+            {photos.length > 1 && (
+              <div className="carousel-pagination-dots" data-testid="carousel-dots">
+                {photos.map((_, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    className={`carousel-dot ${idx === safeImgIndex ? 'active-dot' : ''}`}
+                    onClick={() => setCurrentImageIndex(idx)}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
 
           {photos.length > 1 && (
-            <div className="carousel-pagination-dots" data-testid="carousel-dots">
-              {photos.map((_, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  className={`carousel-dot ${idx === safeImgIndex ? 'active-dot' : ''}`}
-                  onClick={() => setCurrentImageIndex(idx)}
-                  aria-label={`Go to slide ${idx + 1}`}
-                />
-              ))}
-            </div>
+            <button
+              type="button"
+              className="carousel-arrow-btn carousel-arrow-right"
+              onClick={handleNext}
+              aria-label="Next image"
+              data-testid="carousel-next-btn"
+            >
+              <ChevronRight size={20} />
+            </button>
           )}
         </div>
-
-        {photos.length > 1 && (
-          <button
-            type="button"
-            className="carousel-arrow-btn carousel-arrow-right"
-            onClick={handleNext}
-            aria-label="Next image"
-            data-testid="carousel-next-btn"
-          >
-            <ChevronRight size={20} />
-          </button>
-        )}
       </div>
 
       <div className="detail-content-wrapper">

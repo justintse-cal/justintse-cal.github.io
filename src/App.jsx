@@ -31,10 +31,28 @@ export default function App() {
   };
 
   useEffect(() => {
+    // Helper to check if view section can switch or should scroll internally
+    const canTransitionView = (direction) => {
+      const activeSection = document.querySelector('.view-active');
+      if (!activeSection) return true;
+
+      const isScrollable = activeSection.scrollHeight > activeSection.clientHeight + 8;
+      if (!isScrollable) return true;
+
+      const { scrollTop, clientHeight, scrollHeight } = activeSection;
+      const isAtTop = scrollTop <= 8;
+      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 8;
+
+      if (direction === 'down') return isAtBottom;
+      if (direction === 'up') return isAtTop;
+      return true;
+    };
+
     // Wheel event handler
     const handleWheel = (e) => {
       if (Math.abs(e.deltaY) < 15) return;
       const direction = e.deltaY > 0 ? 'down' : 'up';
+      if (!canTransitionView(direction)) return;
       const nextView = getNextView(currentView, direction);
       changeView(nextView);
     };
@@ -50,6 +68,7 @@ export default function App() {
 
       if (Math.abs(deltaY) < 35) return;
       const direction = deltaY > 0 ? 'down' : 'up';
+      if (!canTransitionView(direction)) return;
       const nextView = getNextView(currentView, direction);
       changeView(nextView);
     };
@@ -57,8 +76,10 @@ export default function App() {
     // Keyboard navigation
     const handleKeyDown = (e) => {
       if (['ArrowDown', 'PageDown', 'Space'].includes(e.key)) {
+        if (!canTransitionView('down')) return;
         if (currentView === VIEWS.LANDING) changeView(VIEWS.THEMES);
       } else if (['ArrowUp', 'PageUp'].includes(e.key)) {
+        if (!canTransitionView('up')) return;
         if (currentView === VIEWS.PROJECTS) changeView(VIEWS.THEMES);
         else if (currentView === VIEWS.THEMES) changeView(VIEWS.LANDING);
       }
@@ -83,7 +104,7 @@ export default function App() {
   return (
     <>
       <CustomCursor />
-      <TopBar />
+      <TopBar hidden={currentView === VIEWS.PROJECTS} />
       <main className={`main-view ${bgGradientClass}`} data-testid="main-view">
         <LandingSection
           isActive={currentView === VIEWS.LANDING}
@@ -99,7 +120,7 @@ export default function App() {
           onBackToThemes={() => changeView(VIEWS.THEMES)}
         />
       </main>
-      <BottomBar />
+      <BottomBar hidden={currentView === VIEWS.PROJECTS} />
     </>
   );
 }

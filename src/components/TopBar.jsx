@@ -1,7 +1,9 @@
 import React from 'react';
 import { FileText } from 'lucide-react';
 
-export default function TopBar() {
+export default function TopBar({ hidden }) {
+  if (hidden) return null;
+
   return (
     <header className="fixed-bar top-bar" data-testid="top-bar">
       <div className="identity-group">
