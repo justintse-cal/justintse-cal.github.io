@@ -91,20 +91,20 @@ A single-page React application, deployed as a GitHub Pages root/user site, cons
 - Mobile breakpoint: top bar's two corner groups stack into one centered row; bottom bar's two corner groups stack into a second centered row. Exact breakpoint value to be determined during build (standard mobile breakpoint, e.g. ~768px, as a starting point).
 
 **Landing section**
-- Renders tagline + short summary as large, bold text (Space Grotesk).
-- Fade behavior: opacity (and optionally slight scale) interpolated against scroll position within the landing section's scroll range; fully transparent (and non-interactive, e.g. `pointer-events: none`) once scrolled past.
-- Content is placeholder text (e.g. "Your Name Here — Job Title", lorem-ipsum-style summary) to be manually replaced later.
+- Renders tagline + short summary as large, bold text (Space Grotesk) on the left column.
+- Background: Aceternity-style 3D Marquee with 4 continuous multi-directional scrolling columns displaying project thumbnails tilted in 3D perspective space.
+- Overlay: Left-to-right gradient overlay (`linear-gradient(to right, rgba(8, 8, 10, 0.88) 0%, rgba(8, 8, 10, 0.5) 45%, transparent 75%)`), maintaining strong text contrast on the left while leaving the right side fully transparent to reveal the animated 3D Marquee.
 
 **Projects section**
-- Upper detail panel: CSS grid/flex, 60%/40% (image/text) split on desktop; switches to a single column (image full-width on top, text full-width below) below the mobile breakpoint.
+- Upper detail panel: CSS flex layout (58%/42% image/text split on desktop) with expanded height bounds for prominent project visual presentation; switches to stacked layout on mobile.
+- Background: Topography contour lines SVG layer (`.contour-lines-bg`) matching the landing page background.
 - Text panel contents, top to bottom: project title, link-pill row, description.
-- Link pills: plain text-labeled buttons/pills ("Report", "Slides", "Website", "Article"), styled with orange accent, `target="_blank"` + `rel="noopener noreferrer"` for all outbound links.
-- Lower carousel: Swiper instance configured for infinite loop mode, drag/swipe only (no arrow-button nav, no click-to-jump on individual thumbnails, no keyboard nav), with a static (non-moving, purely visual) center arrow graphic overlaid on the carousel to indicate the active-slide position.
-- Mobile carousel: Swiper's slide-width/`slidesPerView` configured to show partial neighboring thumbnails ("peek") on either side of the active one.
-- Each thumbnail: placeholder image (solid gray/colored box) + project name label beneath it.
+- Link pills: plain text-labeled buttons/pills ("Report", "Slides", "Website", "Article", "Paper", "Poster"), styled with orange accent, `target="_blank"` + `rel="noopener noreferrer"` for all outbound links.
+- Lower carousel: Swiper instance displaying filtered project thumbnails with active top-arrow indicator.
 
-**Theme**
-- Fonts: Space Grotesk (headlines/tagline/project titles), Inter (body text, UI labels, buttons) — both loaded via Google Fonts.
+**Custom Cursor & Theme**
+- Custom Cursor: Static circular ring cursor (`border-radius: 50%`) with center dot providing sleek pointer feedback without performance lag.
+- Fonts: Space Grotesk (headlines/tagline/project titles), Inter (body text, UI labels, buttons).
 - Colors:
   | Role | Hex |
   |---|---|

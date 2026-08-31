@@ -7,8 +7,12 @@ const THEME_BG_IMAGES = [
   '/img/applications.jpg',
 ];
 
-export default function ThemeSelectionSection({ isActive, onSelectTheme }) {
-  const transitionClass = isActive ? 'view-active' : 'view-hidden-down';
+export default function ThemeSelectionSection({ isActive, isPast, onSelectTheme }) {
+  const transitionClass = isActive
+    ? 'view-active'
+    : isPast
+    ? 'view-hidden-up'
+    : 'view-hidden-down';
 
   return (
     <section

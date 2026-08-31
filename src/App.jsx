@@ -14,8 +14,9 @@ export default function App() {
   const isTransitioningRef = useRef(false);
   const touchStartYRef = useRef(0);
 
-  const changeView = useCallback((nextView) => {
-    if (nextView === currentView || isTransitioningRef.current) return;
+  const changeView = useCallback((nextView, force = false) => {
+    if (nextView === currentView) return;
+    if (!force && isTransitioningRef.current) return;
     
     isTransitioningRef.current = true;
     setCurrentView(nextView);
@@ -27,7 +28,8 @@ export default function App() {
 
   const handleSelectTheme = (themeName) => {
     setSelectedTheme(themeName);
-    changeView(VIEWS.PROJECTS);
+    isTransitioningRef.current = false;
+    setCurrentView(VIEWS.PROJECTS);
   };
 
   useEffect(() => {
@@ -104,7 +106,7 @@ export default function App() {
   return (
     <>
       <CustomCursor />
-      <TopBar hidden={currentView === VIEWS.PROJECTS} />
+      <TopBar />
       <main className={`main-view ${bgGradientClass}`} data-testid="main-view">
         <LandingSection
           isActive={currentView === VIEWS.LANDING}
@@ -112,6 +114,7 @@ export default function App() {
         />
         <ThemeSelectionSection
           isActive={currentView === VIEWS.THEMES}
+          isPast={currentView === VIEWS.PROJECTS}
           onSelectTheme={handleSelectTheme}
         />
         <ProjectsSection
@@ -120,7 +123,7 @@ export default function App() {
           onBackToThemes={() => changeView(VIEWS.THEMES)}
         />
       </main>
-      <BottomBar hidden={currentView === VIEWS.PROJECTS} />
+      <BottomBar />
     </>
   );
 }

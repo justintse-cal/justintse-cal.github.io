@@ -1,52 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ChevronDown } from 'lucide-react';
-import { PROJECTS } from '../data/projects';
-
-const getProjectImg = (proj) => {
-  const raw = proj.image || (proj.images && proj.images[0]) || '';
-  return raw.startsWith('public/') ? raw.replace('public/', '/') : raw;
-};
+import ThreeDMarquee from './ThreeDMarquee';
 
 export default function LandingSection({ isActive, onExploreClick }) {
   const transitionClass = isActive ? 'view-active' : 'view-hidden-up';
-
-  // Currently popped random card index
-  const [poppedIndex, setPoppedIndex] = useState(0);
-
-  // Track mobile viewport for responsive pop lift distance
-  const [isMobile, setIsMobile] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return window.innerWidth <= 768;
-    }
-    return false;
-  });
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  // Pick a random project index every 3 seconds
-  useEffect(() => {
-    if (!isActive) return;
-
-    const interval = setInterval(() => {
-      setPoppedIndex((prev) => {
-        let next;
-        do {
-          next = Math.floor(Math.random() * PROJECTS.length);
-        } while (next === prev && PROJECTS.length > 1);
-        return next;
-      });
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [isActive]);
-
-  const totalProjects = PROJECTS.length;
 
   return (
     <section
@@ -54,11 +11,17 @@ export default function LandingSection({ isActive, onExploreClick }) {
       data-testid="landing-section"
       aria-hidden={!isActive}
     >
+      {/* Background Topography Lines */}
       <div className="contour-lines-bg" aria-hidden="true" />
-      <div className="contour-lines-spotlight" aria-hidden="true" />
 
+      {/* 3D Marquee Background */}
+      <ThreeDMarquee />
+
+      {/* Semi-transparent to transparent black color gradient overlay */}
+      <div className="landing-marquee-overlay" aria-hidden="true" />
+
+      {/* Hero Content */}
       <div className="landing-grid">
-        {/* Left Column: Hero Content */}
         <div className="landing-col-left">
           <h1 className="tagline">
             Innovating geospatial solutions that
@@ -88,73 +51,7 @@ export default function LandingSection({ isActive, onExploreClick }) {
             <ChevronDown size={20} />
           </button>
         </div>
-
-        {/* Right Column: Realistic Deep Axonometric 3D Cube Container */}
-        <div
-          className="landing-col-right"
-          data-testid="landing-carousel-block"
-        >
-          <div className="axonometric-viewport">
-            <div className="axonometric-box">
-              {/* 3D Cube Glass Floor & Enclosing 3D Glass Walls */}
-              <div className="box-floor" aria-hidden="true" />
-              <div className="box-wall-back" aria-hidden="true" />
-              <div className="box-wall-left" aria-hidden="true" />
-              <div className="box-wall-right" aria-hidden="true" />
-
-              {/* Upright Cards Deeply Enclosed Inside the Box Floor */}
-              <div className="box-cards-single-column">
-                {PROJECTS.map((proj, idx) => {
-                  const isPopped = poppedIndex === idx;
-
-                  // Spacing along depth axis
-                  const depthOffset = (idx - (totalProjects / 2)) * 18;
-
-                  // Resting cards sit cleanly on the box floor (+15px)
-                  // Desktop/webview popped cards lift -220px; Mobile popped cards lift -100px
-                  const popLiftY = isPopped ? (isMobile ? -100 : -220) : 15;
-                  const popLiftZ = isPopped ? (isMobile ? 30 : 50) : 0;
-
-                  return (
-                    <div
-                      key={proj.id}
-                      className={`axonometric-card ${isPopped ? 'is-popped' : ''}`}
-                      style={{
-                        transform: `rotateX(-90deg) translate3d(0px, ${popLiftY}px, ${depthOffset + popLiftZ}px)`,
-                        zIndex: isPopped ? 300 : 10 + idx,
-                      }}
-                      title={proj.title}
-                    >
-                      <div className="axonometric-card-image-wrap">
-                        <img
-                          src={getProjectImg(proj)}
-                          alt={proj.title}
-                          className="axonometric-card-img"
-                          loading="eager"
-                          decoding="async"
-                        />
-                        <div className="axonometric-card-overlay">
-                          <h4 className="axonometric-card-title">{proj.shortTitle || proj.title}</h4>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Front Glass Facade Wall (renders in front of resting cards) */}
-              <div className="box-wall-front" aria-hidden="true" />
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
 }
-
-
-
-
-
-
-

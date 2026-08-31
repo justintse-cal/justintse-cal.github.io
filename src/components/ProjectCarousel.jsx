@@ -11,15 +11,16 @@ export default function ProjectCarousel({ projects, activeIndex = 0, onActiveInd
 
   if (!projects || projects.length === 0) return null;
 
-  // Sync Swiper slide index when activeIndex changes
+  // Sync Swiper slide index when activeIndex changes and update layout width
   useEffect(() => {
     if (swiperRef.current && swiperRef.current.swiper) {
       const swiper = swiperRef.current.swiper;
+      swiper.update();
       if (swiper.activeIndex !== activeIndex) {
         swiper.slideTo(activeIndex);
       }
     }
-  }, [activeIndex]);
+  }, [activeIndex, projects]);
 
   const swiperKey = projects.map((p) => p.id).join('_');
 
@@ -29,6 +30,8 @@ export default function ProjectCarousel({ projects, activeIndex = 0, onActiveInd
         key={swiperKey}
         ref={swiperRef}
         modules={[Scrollbar, Mousewheel]}
+        observer={true}
+        observeParents={true}
         loop={false}
         centeredSlides={false}
         slidesPerView="auto"

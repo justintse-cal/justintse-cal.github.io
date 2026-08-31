@@ -14,10 +14,6 @@ export default function CustomCursor() {
     const onMouseMove = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
       if (!isVisible) setIsVisible(true);
-
-      // Pass mouse coordinates to CSS custom properties for radial contour spotlight
-      document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
-      document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
     };
 
     const onMouseOver = (e) => {
@@ -62,7 +58,7 @@ export default function CustomCursor() {
       aria-hidden="true"
       data-testid="custom-cursor"
     >
-      {/* Changing Irregular Organic Circle Outer Ring */}
+      {/* Static Rounded Outer Ring */}
       <div className="custom-cursor-outer" />
       {/* Center Dot */}
       <div className="custom-cursor-dot" />

@@ -1,21 +1,21 @@
 # Personal Portfolio Website
 
-A modern personal portfolio website built with **React 19**, **Vite**, **GSAP**, and **Swiper** and designed with dark theme aesthetics. This is developed with the assistance of Google's Gemini 3.6 (High).
+A modern personal portfolio website built with **React 19**, **Vite**, **GSAP**, and **Swiper** and designed with dark theme aesthetics.
 
 Live Demo: [https://justintse-cal.github.io](https://justintse-cal.github.io)
 
 ## ✨ Features
 
-- **3D axonometric Pop-up**: axonometric card animation in the landing page to highlight projects in a pop-up style.
-- **Theme Selection Section**: dedicated section for theme selection
-- **Project Showcase Carousel**: Interactive carousel style project showcase with detailed drawer modals for each project.
-- **Custom Cursor & Smooth Micro-Interactions**: Modern pointer interactions for an immersive user experience.
+- **3D Marquee Background**: Perspective 3D Marquee displaying project thumbnails with multi-directional continuous scrolling and a subtle left-to-right gradient overlay.
+- **Theme Selection Section**: Dedicated domain selection section to explore featured work across Research, Design, and Applications.
+- **Expanded Project Showcase Carousel**: Interactive thumbnail carousel with enlarged project detail panels and responsive image viewports.
+- **Static Circular Custom Cursor**: Performant, minimal circular cursor ring providing smooth pointer feedback across interactive UI elements.
 - **Fully Responsive**: Optimized across all device viewports from mobile screens to desktop displays.
 
 ## 🛠️ Tech Stack
 
 - **Frontend**: React 19, Vite, HTML5, Vanilla CSS3 (Custom Design System)
-- **Animations**: GSAP (GreenSock Animation Platform)
+- **Animations**: CSS3 Perspective Animations, GSAP
 - **Carousel & UI**: Swiper.js, Lucide React Icons
 - **Testing**: Vitest, React Testing Library, JSDOM
 - **Deployment**: GitHub Pages (`gh-pages`)
@@ -54,7 +54,6 @@ Ensure you have **Node.js** (v18 or higher) and **npm** installed on your system
    ```bash
    npm run build
    ```
-
 
 ## 📦 Deployment to GitHub Pages
 
